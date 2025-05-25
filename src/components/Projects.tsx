@@ -4,6 +4,7 @@ const projects = [
     category: "Yapay Zekâ, Web Geliştirme",
     description: "Kullanıcıların dosyalarını yükleyerek sorular sorabileceği bir yapay zekâ asistanı.",
     tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
+    link: "https://github.com/ceyhunemre0/Document_Bot",
     color: {
       bg: "bg-indigo-100",
       text: "text-indigo-600",
@@ -15,10 +16,11 @@ const projects = [
     )
   },
   {
-    title: "Fitness Takip Uygulaması",
-    category: "Mobil Uygulama",
-    description: "Kullanıcıların fitness hedeflerini takip edebilecekleri kapsamlı bir mobil uygulama.",
-    tags: ["UI/UX", "React Native", "Firebase"],
+    title: "Spotify Müzik Analiz Sitesi",
+    category: "Web Geliştirme",
+    description: "Kullanıcıların 1 aylık, 6 aylık ve 1 yıllık müzik ve sanatçı dinleme istatistiklerini gösteren bir web uygulaması.",
+    tags: ["Flask", "Python", "Spotify API", "Html", "CSS"],
+    link:"https://github.com/ceyhunemre0/StatifyPlus",
     color: {
       bg: "bg-purple-100",
       text: "text-purple-600",
@@ -31,10 +33,11 @@ const projects = [
     )
   },
   {
-    title: "Marka Kimliği Tasarımı",
-    category: "Grafik Tasarım",
-    description: "Yeni bir startup için logo, renk paleti ve marka kimliği tasarımı.",
-    tags: ["Illustrator", "Photoshop", "Branding"],
+    title: "Portfolio Web Sitesi",
+    category: "Web Geliştirme",
+    description: "Kendi portföyümü sergilediğim, projelerimi ve yeteneklerimi tanıttığım ve şuan gördüğünüz web sitesi.",
+    tags: ["NextJs", "TypeScript", "Tailwind CSS", "React"],
+    link:"#",
     color: {
       bg: "bg-pink-100",
       text: "text-pink-600",
@@ -83,7 +86,9 @@ export default function ProjectSection() {
                   ))}
                 </div>
                 <a
-                  href="#"
+                  href={project.link || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`inline-block font-medium transition duration-300 ${project.color.text} ${project.color.text}`}
                 >
                   Detayları Gör <i className="fas fa-arrow-right ml-1"></i>
