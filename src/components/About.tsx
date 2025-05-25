@@ -18,9 +18,6 @@ export default function About() {
                         />
                     </div>
                 </div>
-                {
-                // TODO: edit about section text
-                }
                 <div className="md:w-1/2 md:pl-10">
                     <h3 className="text-2xl font-bold mb-4"><span className="text-indigo-600">Yapay Zeka </span>&amp; <span className="text-purple-600">Backend </span> Geliştirici</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
