@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Contact from "@/components/contact";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,8 @@ export default function RootLayout({
           <About />
           <Projects />
           <Skills />
+          <Contact />
+
           <div className="flex flex-col items-center justify-center min-h-screen">
             {children}
           </div>
