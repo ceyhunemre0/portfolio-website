@@ -18,7 +18,9 @@ export default function About() {
                         />
                     </div>
                 </div>
-                
+                {
+                // TODO: edit about section text
+                }
                 <div className="md:w-1/2 md:pl-10">
                     <h3 className="text-2xl font-bold mb-4">Yapay Zeka &amp; <span className="text-indigo-600">Backend</span> <span className="text-purple-600">Geliştirici</span></h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
@@ -31,6 +33,9 @@ export default function About() {
                     </p>
                     
                     <div className="flex flex-wrap gap-4">
+                        {
+                        // TODO: edit twitter link to upwork link
+                        }
                         <a
                             href="#"
                             className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"

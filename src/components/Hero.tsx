@@ -6,7 +6,10 @@ export default function Hero() {
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Merhaba, Ben
-              <span className="text-yellow-300"> Ceyhun Emre</span>
+              <span className="text-yellow-300"> Ceyhun Emre</span> 
+              {
+              // TODO: typing effect can be added here 
+              }
             </h1>
             <p className="text-xl font-bold text-white leading-tight mb-6">
               Yapay Zeka çalışmalarımı keşfedin ve benimle iletişime geçin!
