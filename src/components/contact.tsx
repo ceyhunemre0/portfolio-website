@@ -33,7 +33,8 @@ export default function Contact() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">İletişim</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                    <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
+                    <p className="text-gray-600 max-w-2xl mx-auto ">Projeler, iş birlikleri ya da sadece sohbet etmek için bana ulaşabilirsin.</p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-10">
                     <div className="md:w-1/2">

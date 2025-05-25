@@ -1,8 +1,10 @@
+import { describe } from "node:test";
+
 const projects = [
   {
-    title: "Dosya Destekli Yapay Zekâ Asistanı",
+    title: "ChatFlowAI",
     category: "Yapay Zekâ, Web Geliştirme",
-    description: "Kullanıcıların dosyalarını yükleyerek sorular sorabileceği bir yapay zekâ asistanı.",
+    description: "ChatFlowAI, TypeScript, Next.js ve LangChain kullanılarak geliştirilmiş bir dosya tabanlı chatbot uygulamasıdır. Projenin arka yapısında LangChain ile döküman tabanlı doğal dil işleme sağlanırken, TypeScript ile güvenli ve sürdürülebilir bir kod yapısı oluşturulmuştur. Next.js, hem hızlı sayfa geçişleri hem de SEO uyumlu yapısıyla projeye güçlü bir temel sunar. Kullanıcı arayüzü, yüklenen dökümanlara dayalı olarak etkileşimli yanıtlar sunacak şekilde tasarlanmıştır. Bu proje, yapay zeka, dosya işleme ve modern web teknolojilerinin birleşimiyle etkili ve özelleştirilebilir bir sohbet deneyimi sağlar.",
     tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
     link: "https://github.com/ceyhunemre0/Document_Bot",
     color: {
@@ -16,9 +18,9 @@ const projects = [
     )
   },
   {
-    title: "Spotify Müzik Analiz Sitesi",
+    title: "Statify+",
     category: "Web Geliştirme",
-    description: "Kullanıcıların 1 aylık, 6 aylık ve 1 yıllık müzik ve sanatçı dinleme istatistiklerini gösteren bir web uygulaması.",
+    description: "StatifyPlus, Python ile geliştirilmiş bir Spotify veri analiz projesidir. Projenin arka ucunda Python kullanılırken, ön yüz tasarımı HTML, CSS ve JavaScript ile oluşturulmuştur. Python, Spotify API’sinden veri çekme ve analiz işlemlerini gerçekleştirir. Kullanıcı arayüzü, müzik verilerini görselleştirmek için dinamik ve etkileşimli yapıda tasarlanmıştır. Proje, veri işleme, API entegrasyonu ve web teknolojilerinin birlikte kullanılmasıyla kapsamlı bir çözüm sunar.",
     tags: ["Flask", "Python", "Spotify API", "Html", "CSS"],
     link:"https://github.com/ceyhunemre0/StatifyPlus",
     color: {
@@ -27,15 +29,13 @@ const projects = [
 
     },
     icon: (
-      <svg className="w-24 h-24 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
+      <img src="/statifyplus.png" alt="StatifyPlus Logo" className="w-100 h-100 object-contain" />
     )
   },
   {
-    title: "Portfolio Web Sitesi",
+    title: "Portfolio.",
     category: "Web Geliştirme",
-    description: "Kendi portföyümü sergilediğim, projelerimi ve yeteneklerimi tanıttığım ve şuan gördüğünüz web sitesi.",
+    description:"Portfolio., Next.js, Tailwind CSS ve TypeScript kullanılarak geliştirilmiş bir kişisel portfolyo websitesidir. Projenin arka yapısında TypeScript ile güvenli ve ölçeklenebilir bir kod yapısı oluşturulurken, kullanıcı arayüzü Tailwind CSS ile modern ve responsive bir şekilde tasarlanmıştır. Next.js sayesinde sayfa geçişleri hızlıdır ve SEO uyumluluğu sağlanmıştır. Portfolyo sitesi, projeleri, kullanılan teknolojileri ve kişisel bilgileri dinamik ve sade bir yapıda sunar. Bu proje, modern web teknolojilerinin birlikte kullanılmasıyla performanslı ve etkileyici bir tanıtım aracı sunar.",
     tags: ["NextJs", "TypeScript", "Tailwind CSS", "React"],
     link:"#",
     color: {
@@ -58,7 +58,8 @@ export default function ProjectSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projelerim</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto ">Üzerinde keyifle çalıştığım bazı projeler burada. Her biri farklı bir problemi çözmeye yönelik yaratıcı denemeler içeriyor.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (

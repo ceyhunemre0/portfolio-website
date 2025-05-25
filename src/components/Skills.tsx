@@ -30,14 +30,15 @@ export default function Skills() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Yeteneklerim</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                    <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
+                    <p className="text-gray-600 max-w-2xl mx-auto ">Projelerimi şekillendiren ve geliştirme sürecinde sıkça başvurduğum beceriler burada. Hepsi zamanla, deneme-yanılmayla ve bolca kahveyle gelişti.</p>
                 </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-4 justify-center">
                 {skills.map(skill => (
                     <section
                         key={skill.name}
-                        className={`flex items-center gap-2 px-3 py-1 text-xs rounded-full ${skill.bg} ${skill.text} ${skill.border}`}
+                        className={`flex items-center gap-2 px-3 py-1 text-xs rounded-full transition-transform duration-200 hover:scale-110 ${skill.bg} ${skill.text} ${skill.border}`}
                     >
                         <i className={`${skill.iconClass} text-2xl`} />
                         <span>{skill.name}</span>

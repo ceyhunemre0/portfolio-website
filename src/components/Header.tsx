@@ -9,7 +9,9 @@ export default function Header() {
 
 
             <div className="flex items-center">
-                <h1 className="text-2xl font-bold text-indigo-600">Portfolio<span className="text-indigo-800">.</span></h1>
+                <a href="#" className="text-2xl font-bold text-indigo-600">
+                    Portfolio<span className="text-indigo-800">.</span>
+                </a>
             </div>
 
             <nav className="hidden md:flex space-x-8 mr-6">

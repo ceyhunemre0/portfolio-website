@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Welcome to My Personal Website",
-  description: "This is my personal website where I showcase my projects and skills.",
+  title: "Portfolio.",
+  description: "Hello I'm Ceyhun Emre, a Full Stack Developer.",
 };
 
 export default function RootLayout({
