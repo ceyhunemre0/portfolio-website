@@ -128,7 +128,7 @@ export default function Contact() {
                                     </div>
                                     <div className="ml-4">
                                         <h4 className="text-lg font-semibold">Telefon</h4>
-                                        <p className="text-gray-600">+90 506 122 22 65</p>
+                                        <p className="text-gray-600">Detaylar için iletişime geçin.</p>
                                     </div>
                                 </div>
 
@@ -148,17 +148,29 @@ export default function Contact() {
                             <div className="mt-8">
                                 <h4 className="text-lg font-semibold mb-4">Sosyal Medya</h4>
                                 <div className="flex space-x-4">
-                                    <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300">
+                                    <a
+                                        href="https://www.instagram.com/only_emree/"
+                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-instagram"></i>
                                     </a>
-                                    <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300">
+                                    <a
+                                        href="https://www.linkedin.com/in/ceyhun-emre-top-85212b311"
+                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-linkedin-in"></i>
                                     </a>
-                                    <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300">
-                                        <i className="fab fa-behance"></i>
+                                    <a
+                                        href="https://www.github.com/ceyhunemre0"
+                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>

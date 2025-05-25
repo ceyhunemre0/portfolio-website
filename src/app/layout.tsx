@@ -1,12 +1,7 @@
 // app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Contact from "@/components/contact";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,14 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="bg-white text-black transition-colors duration-300">
-          <Header />
-          <Hero />
-          <About />
-          <Projects />
-          <Skills />
-          <Contact />
-
-          <div className="flex flex-col items-center justify-center min-h-screen">
+          <div className="">
             {children}
           </div>
       </body>

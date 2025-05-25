@@ -1,8 +1,4 @@
 'use client';
-import { useTheme } from "@/context/theme-context";
-
-
-
 export default function Header() {
  
 
@@ -13,11 +9,11 @@ export default function Header() {
 
 
             <div className="flex items-center">
-                <h1 className="text-2xl font-bold text-indigo-600">My Portfolio</h1>
+                <h1 className="text-2xl font-bold text-indigo-600">Portfolio<span className="text-indigo-800">.</span></h1>
             </div>
 
-            <nav className="hidden md:flex space-x-8">
-                <a href="#about" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
+            <nav className="hidden md:flex space-x-8 mr-6">
+                <a href="#" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
                 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
                 ">
@@ -29,25 +25,24 @@ export default function Header() {
                 ">
                 Hakkımda
                 </a>
-                <a href="#about" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
+                <a href="#projects" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
                 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
                 ">
                 Projelerim
                 </a>
-                <a href="#about" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
+                <a href="#skills" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
                 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
                 ">
                 Yeteneklerim
                 </a>
-                <a href="#about" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
+                <a href="#contact" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
                 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
                 ">
                 İletişim
                 </a>
-                
             </nav>
             <button
                 id="mobile-menu-button"
@@ -68,11 +63,11 @@ export default function Header() {
 
             <div id="mobile-menu" className="md:hidden bg-white shadow-lg absolute w-full hidden">
             <div className="container mx-auto px-4 py-2 flex flex-col space-y-3">
-                <a href="#anasayfa" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Anasayfa</a>
-                <a href="#hakkimda" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Hakkımda</a>
-                <a href="#projeler" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Projeler</a>
-                <a href="#yetenekler" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Yetenekler</a>
-                <a href="#iletisim" className="py-2 font-medium text-gray-700 hover:text-indigo-600">İletişim</a>
+                <a href="#" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Anasayfa</a>
+                <a href="#about" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Hakkımda</a>
+                <a href="#projects" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Projeler</a>
+                <a href="#skills" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Yetenekler</a>
+                <a href="#contact" className="py-2 font-medium text-gray-700 hover:text-indigo-600">İletişim</a>
             </div>
             </div>
         </header>
