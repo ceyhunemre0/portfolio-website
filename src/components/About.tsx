@@ -12,7 +12,7 @@ export default function About() {
                     <div className="md:w-1/2 mb-10 md:mb-0">
                         <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
                             <Image
-                                src="/pp.png"
+                                src="/about_image.png"
                                 alt="Profil Fotoğrafı"
                                 layout="fill"
                                 objectFit="cover"
