@@ -26,7 +26,7 @@ const projects = [
       bg: "bg-purple-100",
       text: "text-purple-600",
     },
-    iconType: "image",
+    iconType: "document",
   },
   {
     title: "Portfolio.",
@@ -39,7 +39,7 @@ const projects = [
       bg: "bg-pink-100",
       text: "text-pink-600",
     },
-    iconType: "portfolio",
+    iconType: "document",
   },
 ];
 
