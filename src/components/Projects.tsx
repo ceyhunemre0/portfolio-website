@@ -8,7 +8,7 @@ const projects = [
     description:
       "ChatFlowAI, TypeScript, Next.js ve LangChain kullanılarak geliştirilmiş dosya tabanlı bir chatbot uygulamasıdır. Kullanıcının yüklediği dokümanlardan doğal dil işleme ile yanıt üreten, özelleştirilebilir ve modern bir yapay zekâ çözümüdür.",
     tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
-    link: "https://github.com/ceyhunemre0/Document_Bot",
+    link: "https://github.com/ceyhunemre0/rag-chatbot",
     color: {
       bg: "bg-indigo-100",
       text: "text-indigo-600",
