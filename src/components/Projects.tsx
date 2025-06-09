@@ -41,6 +41,19 @@ const projects = [
     },
     iconType: "document",
   },
+  {
+    title: "SearchAgent",
+    category: "Yapay Zekâ, Web Geliştirme",
+    description:
+    "Search Agent, Next.js, TypeScript ve LangChain kullanılarak geliştirilen akıllı arama destekli bir yapay zeka ajan uygulamasıdır. SERP API ile entegre çalışan bu sistem, kullanıcıdan gelen doğal dil sorularına çevrim içi bilgi kaynaklarını tarayarak doğru ve güncel yanıtlar üretir. Modüler yapısı sayesinde kolayca özelleştirilebilir ve farklı bilgi tabanlarına entegre edilebilir.",
+    tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
+    link: "https://github.com/ceyhunemre0/SearchAgent",
+    color: {
+      bg: "bg-indigo-100",
+      text: "text-indigo-600",
+    },
+    iconType: "document",
+  }
 ];
 
 const getIcon = (type: string) => {
