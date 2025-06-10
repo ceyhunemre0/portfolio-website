@@ -1,6 +1,7 @@
 // app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="bg-white text-black transition-colors duration-300">
           <div className="">
+            <Analytics />
             {children}
           </div>
       </body>
