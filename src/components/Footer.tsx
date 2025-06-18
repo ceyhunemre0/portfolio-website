@@ -4,8 +4,8 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
-                        <a href="#" className="text-2xl font-bold">Portfolio
-                            <span className="text-indigo-400">.</span>
+                        <a href="#" className="text-2xl font-bold">Ceyhun
+                            <span className="text-indigo-400"> Emre</span>
                         </a>
                         <p className="mt-2 text-gray-400">
                             Yaratıcı Yapay zekâ &amp; Backend Çözümleri

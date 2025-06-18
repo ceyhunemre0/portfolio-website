@@ -9,6 +9,7 @@ const projects = [
       "ChatFlowAI, TypeScript, Next.js ve LangChain kullanılarak geliştirilmiş dosya tabanlı bir chatbot uygulamasıdır. Kullanıcının yüklediği dokümanlardan doğal dil işleme ile yanıt üreten, özelleştirilebilir ve modern bir yapay zekâ çözümüdür.",
     tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
     link: "https://github.com/ceyhunemre0/rag-chatbot",
+    image: null,
     color: {
       bg: "bg-indigo-100",
       text: "text-indigo-600",
@@ -22,6 +23,7 @@ const projects = [
       "StatifyPlus, Python ve Flask ile geliştirilen bir Spotify veri analiz uygulamasıdır. Spotify API’si ile entegre çalışarak kullanıcı müzik alışkanlıklarını analiz eder ve bu verileri etkileşimli grafiklerle sunar.",
     tags: ["Flask", "Python", "Spotify API", "Html", "CSS"],
     link: "https://github.com/ceyhunemre0/StatifyPlus",
+    image: "/statifyplus.png",
     color: {
       bg: "bg-purple-100",
       text: "text-purple-600",
@@ -35,6 +37,7 @@ const projects = [
       "Next.js, TypeScript ve Tailwind CSS kullanılarak geliştirilen modern kişisel portfolyo sitesidir. Performanslı, SEO uyumlu ve responsive yapısı ile profesyonel geliştirici kimliğini sergiler.",
     tags: ["NextJs", "TypeScript", "Tailwind CSS", "React"],
     link: "#",
+    image: "/portfolio.png",
     color: {
       bg: "bg-pink-100",
       text: "text-pink-600",
@@ -45,9 +48,10 @@ const projects = [
     title: "SearchAgent",
     category: "Yapay Zekâ, Web Geliştirme",
     description:
-    "Search Agent, Next.js, TypeScript ve LangChain kullanılarak geliştirilen akıllı arama destekli bir yapay zeka ajan uygulamasıdır. SERP API ile entegre çalışan bu sistem, kullanıcıdan gelen doğal dil sorularına çevrim içi bilgi kaynaklarını tarayarak doğru ve güncel yanıtlar üretir. Modüler yapısı sayesinde kolayca özelleştirilebilir ve farklı bilgi tabanlarına entegre edilebilir.",
+      "Search Agent, Next.js, TypeScript ve LangChain kullanılarak geliştirilen akıllı arama destekli bir yapay zeka ajan uygulamasıdır. SERP API ile entegre çalışan bu sistem, kullanıcıdan gelen doğal dil sorularına çevrim içi bilgi kaynaklarını tarayarak doğru ve güncel yanıtlar üretir. Modüler yapısı sayesinde kolayca özelleştirilebilir ve farklı bilgi tabanlarına entegre edilebilir.",
     tags: ["TypeScript", "NextJs", "LangChain", "OpenAI"],
     link: "https://github.com/ceyhunemre0/SearchAgent",
+    image: "/searchagent.png",
     color: {
       bg: "bg-indigo-100",
       text: "text-indigo-600",
@@ -63,16 +67,6 @@ const getIcon = (type: string) => {
         <svg className="w-24 h-24 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
-      );
-    case "image":
-      return (
-        <Image
-          src="/statifyplus.png"
-          alt="StatifyPlus Logo"
-          width={96}
-          height={96}
-          className="object-contain"
-        />
       );
     case "portfolio":
       return (
@@ -102,9 +96,22 @@ export default function Projects() {
               key={index}
               className="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
             >
-              <div className={`h-60 flex items-center justify-center ${project.color.bg}`}>
-                {getIcon(project.iconType)}
-              </div>
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={240}
+                  className="w-full h-60 object-fit"
+                />
+              ) : (
+                <div className={`h-60 flex items-center justify-center ${project.color.bg}`}>
+                  {
+                    getIcon(project.iconType)
+                  }
+                </div>
+              )
+              }
               <div className="p-6">
                 <span className={`text-xs font-semibold uppercase tracking-wider ${project.color.text}`}>
                   {project.category}

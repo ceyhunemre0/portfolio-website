@@ -9,8 +9,11 @@ export default function Header() {
 
 
             <div className="flex items-center">
-                <a href="#" className="text-2xl font-bold text-indigo-600">
-                    Portfolio<span className="text-indigo-800">.</span>
+                <a href="#" className="text-2xl font-bold text-indigo-800">
+                    <span className="text-indigo-400">
+                        {`</`}
+                    </span>
+                    Ceyhun Emre<span className="text-indigo-400">{`>`}</span>
                 </a>
             </div>
 
