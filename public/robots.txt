@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ceyhunemre.net.tr
+
+# Sitemaps
+Sitemap: https://www.ceyhunemre.net.tr/sitemap.xml
