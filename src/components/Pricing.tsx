@@ -238,7 +238,7 @@ export default function Pricing() {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {currentCategory.tiers.map((tier, index) => (
+          {currentCategory.tiers.map((tier) => (
             <div
               key={tier.name}
               className={`relative bg-white/70 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 ${
