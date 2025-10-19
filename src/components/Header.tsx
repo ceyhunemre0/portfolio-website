@@ -42,6 +42,12 @@ export default function Header() {
                 ">
                 Yeteneklerim
                 </a>
+                <a href="#pricing" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
+                after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
+                after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
+                ">
+                Fiyatlandırma
+                </a>
                 <a href="#contact" className="relative nav-link font-medium text-gray-700 hover:text-indigo-600 
                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:-bottom-[2px] after:left-0 
                 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full
@@ -72,6 +78,7 @@ export default function Header() {
                 <a href="#about" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Hakkımda</a>
                 <a href="#projects" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Projeler</a>
                 <a href="#skills" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Yetenekler</a>
+                <a href="#pricing" className="py-2 font-medium text-gray-700 hover:text-indigo-600">Fiyatlandırma</a>
                 <a href="#contact" className="py-2 font-medium text-gray-700 hover:text-indigo-600">İletişim</a>
             </div>
             </div>
