@@ -236,8 +236,8 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto pt-8">
           {currentCategory.tiers.map((tier) => (
             <div
               key={tier.name}
@@ -248,8 +248,8 @@ export default function Pricing() {
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full text-sm font-bold shadow-xl animate-pulse">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-xl animate-pulse whitespace-nowrap">
                     ⭐ Popüler Seçim
                   </span>
                 </div>
