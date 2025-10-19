@@ -29,19 +29,25 @@ export default function Contact() {
 
 
     return (
-        <section className="py-20 bg-gray-50 text-black" id="contact">
-            <div className="container mx-auto px-4">
+        <section className="relative py-20 bg-gradient-to-br from-gray-50 to-slate-100 text-gray-900 overflow-hidden" id="contact">
+            {/* Decorative Background */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
+
+            <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">İletişim</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
-                    <p className="text-gray-600 max-w-2xl mx-auto ">Projeler, iş birlikleri ya da sadece sohbet etmek için bana ulaşabilirsin.</p>
+                    <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">
+                        İletişim
+                    </h2>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
+                    <p className="text-gray-700 max-w-2xl mx-auto text-lg">Projeler, iş birlikleri ya da sadece sohbet etmek için bana ulaşabilirsin.</p>
                 </div>
-                <div className="flex flex-col md:flex-row gap-10">
-                    <div className="md:w-1/2">
+                <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+                    <div className="lg:w-1/2">
                         <form
                             onSubmit={handleSubmit}
                             method="POST"
-                            className="space-y-6"
+                            className="space-y-6 bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-gray-200"
                         >
                             {/* Redirect after submit */}
                             <input type="hidden" name="_next" value="https://localhost:3000" />
@@ -55,7 +61,7 @@ export default function Contact() {
                                     id="name"
                                     name="name"
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                                     placeholder="Adınız Soyadınız"
                                 />
                             </div>
@@ -67,7 +73,7 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                                     placeholder="ornek@email.com"
                                 />
                             </div>
@@ -79,7 +85,7 @@ export default function Contact() {
                                     id="subject"
                                     name="subject"
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                                     placeholder="Mesajınızın konusu"
                                 />
                             </div>
@@ -91,28 +97,28 @@ export default function Contact() {
                                     name="message"
                                     rows={5}
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                                     placeholder="Mesajınızı buraya yazın..."
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full py-3 px-6 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
+                                className="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                             >
                                 Mesaj Gönder
                             </button>
                         </form>
                     </div>
-                    <div className="md:w-1/2">
-                        <div className="bg-white p-8 rounded-xl shadow-md h-full">
+                    <div className="lg:w-1/2">
+                        <div className="bg-white/70 backdrop-blur-md p-8 rounded-3xl shadow-xl h-full border border-gray-200">
                             <h3 className="text-2xl font-bold mb-6">İletişim Bilgileri</h3>
 
                             <div className="space-y-6">
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center contact-icon">
-                                            <i className="fas fa-envelope text-indigo-600 text-xl"></i>
+                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg">
+                                            <i className="fas fa-envelope text-white text-xl"></i>
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -123,8 +129,8 @@ export default function Contact() {
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center contact-icon">
-                                            <i className="fas fa-phone text-indigo-600 text-xl"></i>
+                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center shadow-lg">
+                                            <i className="fas fa-phone text-white text-xl"></i>
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -135,8 +141,8 @@ export default function Contact() {
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center contact-icon">
-                                            <i className="fas fa-map-marker-alt text-indigo-600 text-xl"></i>
+                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg">
+                                            <i className="fas fa-map-marker-alt text-white text-xl"></i>
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -151,27 +157,27 @@ export default function Contact() {
                                 <div className="flex space-x-4">
                                     <a
                                         href="https://www.instagram.com/only_emree/"
-                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <i className="fab fa-instagram"></i>
+                                        <i className="fab fa-instagram text-xl"></i>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/ceyhun-emre-top-85212b311"
-                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <i className="fab fa-linkedin-in"></i>
+                                        <i className="fab fa-linkedin-in text-xl"></i>
                                     </a>
                                     <a
                                         href="https://www.github.com/ceyhunemre0"
-                                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
+                                        className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-slate-600 to-gray-700 text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <i className="fab fa-github"></i>
+                                        <i className="fab fa-github text-xl"></i>
                                     </a>
                                 </div>
                             </div>

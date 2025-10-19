@@ -26,24 +26,36 @@ export default function Skills() {
 
 
     return (
-        <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-black" id='skills'>
-            <div className="max-w-7xl mx-auto">
+        <section className="relative bg-gradient-to-br from-gray-50 to-slate-100 py-20 px-6 md:px-12 lg:px-16 text-gray-900 overflow-hidden" id='skills'>
+            {/* Decorative Background */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Yeteneklerim</h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
-                    <p className="text-gray-600 max-w-2xl mx-auto ">Projelerimi şekillendiren ve geliştirme sürecinde sıkça başvurduğum beceriler burada. Hepsi zamanla, deneme-yanılmayla ve bolca kahveyle gelişti.</p>
+                    <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">
+                        Yeteneklerim
+                    </h2>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
+                    <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+                        Projelerimi şekillendiren ve geliştirme sürecinde sıkça başvurduğum beceriler burada. Hepsi zamanla, deneme-yanılmayla ve bolca kahveyle gelişti.
+                    </p>
                 </div>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-4 justify-center">
-                {skills.map(skill => (
-                    <section
-                        key={skill.name}
-                        className={`flex items-center gap-2 px-3 py-1 text-xs rounded-full transition-transform duration-200 hover:scale-110 ${skill.bg} ${skill.text} ${skill.border}`}
-                    >
-                        <i className={`${skill.iconClass} text-2xl`} />
-                        <span>{skill.name}</span>
-                    </section>
-                ))}
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+                    {skills.map(skill => (
+                        <div
+                            key={skill.name}
+                            className="group relative bg-white/70 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-gray-200 hover:border-blue-300 flex flex-col items-center justify-center gap-3"
+                        >
+                            {/* Gradient glow on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-300"></div>
+                            
+                            <i className={`${skill.iconClass} text-5xl relative z-10 text-slate-700 group-hover:text-blue-600 transition-colors duration-300`} />
+                            <span className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">{skill.name}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     )

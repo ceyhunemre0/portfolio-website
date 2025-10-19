@@ -81,12 +81,18 @@ const getIcon = (type: string) => {
 
 export default function Projects() {
   return (
-    <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 text-black" id="projects">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-white py-20 px-6 md:px-12 lg:px-16 text-gray-900 overflow-hidden" id="projects">
+      {/* Decorative Background */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-indigo-50/50 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projelerim</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">
+            Projelerim
+          </h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-gray-700 max-w-2xl mx-auto text-lg">
             Üzerinde keyifle çalıştığım bazı projeler burada. Her biri farklı bir problemi çözmeye yönelik yaratıcı denemeler içeriyor.
           </p>
         </div>
@@ -94,7 +100,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-500 border border-gray-200"
             >
               {project.image ? (
                 <Image
@@ -113,16 +119,16 @@ export default function Projects() {
               )
               }
               <div className="p-6">
-                <span className={`text-xs font-semibold uppercase tracking-wider ${project.color.text}`}>
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-blue-600 text-white rounded-full mb-3">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold mt-2 mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <h3 className="text-2xl font-bold mt-2 mb-3 text-gray-900">{project.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className={`px-3 py-1 text-xs rounded-full ${project.color.bg} ${project.color.text}`}
+                      className="px-3 py-1 text-xs font-medium rounded-lg bg-gray-100 text-gray-700 border border-gray-200"
                     >
                       {tag}
                     </span>
@@ -132,9 +138,12 @@ export default function Projects() {
                   href={project.link || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-block font-medium transition duration-300 ${project.color.text}`}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 hover:shadow-lg transition-all duration-300"
                 >
-                  Detayları Gör <i className="fas fa-arrow-right ml-1"></i>
+                  Detayları Gör 
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </a>
               </div>
             </div>

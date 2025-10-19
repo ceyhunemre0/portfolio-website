@@ -201,14 +201,19 @@ export default function Pricing() {
   const currentCategory = pricingData.find(cat => cat.id === activeCategory) || pricingData[0];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white" id="pricing">
-      <div className="container mx-auto px-4">
+    <section className="relative py-20 bg-gradient-to-br from-slate-50 to-gray-100 overflow-hidden" id="pricing">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Hizmetler & <span className="text-indigo-600">Fiyatlandırma</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">
+            Hizmetler & Fiyatlandırma
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             İhtiyacınıza uygun profesyonel çözümler. Projelerinizi hayata geçirmek için en uygun paketi seçin.
           </p>
         </div>
@@ -219,13 +224,13 @@ export default function Pricing() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 ${
+              className={`px-6 py-3 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === category.id
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-200'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg scale-105'
+                  : 'bg-white/70 backdrop-blur-md text-gray-700 hover:bg-white hover:shadow-md border border-gray-200'
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
+              <span className="text-2xl">{category.icon}</span>
               {category.name}
             </button>
           ))}
@@ -236,15 +241,15 @@ export default function Pricing() {
           {currentCategory.tiers.map((tier, index) => (
             <div
               key={tier.name}
-              className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+              className={`relative bg-white/70 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 ${
                 tier.popular
-                  ? 'border-4 border-indigo-600 md:scale-105'
-                  : 'border border-gray-200'
+                  ? 'border-4 border-blue-400 md:scale-105 bg-white/80'
+                  : 'border-2 border-gray-200'
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full text-sm font-bold shadow-xl animate-pulse">
                     ⭐ Popüler Seçim
                   </span>
                 </div>
@@ -258,7 +263,7 @@ export default function Pricing() {
                 {/* Price */}
                 <div className="mb-6">
                   <div className="flex items-baseline">
-                    <span className="text-4xl font-bold text-indigo-600">{tier.price}</span>
+                    <span className="text-4xl font-bold text-blue-600">{tier.price}</span>
                   </div>
                   <span className="text-gray-500 text-sm">{tier.period}</span>
                 </div>
@@ -266,10 +271,10 @@ export default function Pricing() {
                 {/* CTA Button */}
                 <a
                   href="#contact"
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 mb-8 ${
+                  className={`block w-full text-center py-4 px-6 rounded-xl font-bold transition-all duration-300 mb-8 ${
                     tier.popular
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-xl'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                      ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-2xl hover:scale-105'
+                      : 'bg-gradient-to-r from-slate-100 to-gray-200 text-gray-900 hover:from-slate-200 hover:to-gray-300 hover:scale-105 border border-gray-300'
                   }`}
                 >
                   {tier.cta}
