@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [currentRole, setCurrentRole] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
   const roles = [
     '💡 AI Engineer',
@@ -16,8 +17,12 @@ export default function Hero() {
   useEffect(() => {
     setMounted(true);
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentRole((prev) => (prev + 1) % roles.length);
+        setIsTransitioning(false);
+      }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -71,8 +76,10 @@ export default function Hero() {
             </h1>
 
             {/* Animated Role Switcher */}
-            <div className="h-16 mb-8">
-              <p className="text-2xl md:text-3xl font-bold text-white/90 transition-all duration-500">
+            <div className="h-16 mb-8 flex items-center justify-center lg:justify-start">
+              <p className={`text-2xl md:text-3xl font-bold text-white/90 transition-all duration-1000 ease-in-out ${
+                isTransitioning ? 'opacity-0 translate-y-2 scale-95' : 'opacity-100 translate-y-0 scale-100'
+              }`}>
                 {roles[currentRole]}
               </p>
             </div>
@@ -118,7 +125,7 @@ export default function Hero() {
                   <span className="text-2xl">🚀</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-2xl font-bold text-white">15+</p>
+                  <p className="text-2xl font-bold text-white">7+</p>
                   <p className="text-sm">Projeler</p>
                 </div>
               </div>
@@ -127,7 +134,7 @@ export default function Hero() {
                   <span className="text-2xl">⭐</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-2xl font-bold text-white">2+</p>
+                  <p className="text-2xl font-bold text-white">3+</p>
                   <p className="text-sm">Yıl Deneyim</p>
                 </div>
               </div>
@@ -136,7 +143,7 @@ export default function Hero() {
                   <span className="text-2xl">💼</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-2xl font-bold text-white">10+</p>
+                  <p className="text-2xl font-bold text-white">5+</p>
                   <p className="text-sm">Mutlu Müşteri</p>
                 </div>
               </div>

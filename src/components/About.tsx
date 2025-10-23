@@ -40,7 +40,7 @@ export default function About() {
 
                             {/* Floating Stats Cards */}
                             <div className="absolute -top-6 -right-6 bg-white backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-gray-200">
-                                <p className="text-3xl font-bold text-blue-600">2+</p>
+                                <p className="text-3xl font-bold text-blue-600">3+</p>
                                 <p className="text-xs text-gray-600">Yıl Deneyim</p>
                             </div>
                             
@@ -67,11 +67,11 @@ export default function About() {
                                     Yazılım dünyasına olan ilgim, beni sürekli olarak yeni teknolojiler öğrenmeye ve projeler geliştirmeye yönlendiriyor.
                                 </p>
                                 <p>
-                                    <span className="font-semibold text-blue-600">2 yıldır</span> bir startupta full stack geliştirici olarak çalışıyorum ve bu süreçte hem frontend hem de backend teknolojileri üzerinde deneyim kazandım.
+                                    <span className="font-semibold text-blue-600">3 yıldır</span> bir startupta full stack geliştirici olarak çalışıyorum ve bu süreçte hem frontend hem de backend teknolojileri üzerinde deneyim kazandım.
                                     Bilgisayar mühendisliği eğitimi alarak, teorik bilgileri pratik uygulamalarla birleştirmeyi öğrendim.
                                 </p>
                                 <p>
-                                    <span className="font-semibold text-indigo-600">AI agentlar</span>, yapay zeka destekli chatbotlar ve backend sistemleri üzerine projeler geliştirdim.
+                                    <span className="font-semibold text-indigo-600">AI agentlar</span>, yapay zeka destekli chatbotlar ve web geliştirme üzerine projeler geliştirdim.
                                     Amacım, yazılım dünyasında yenilikçi çözümler üreterek, kullanıcıların hayatını kolaylaştırmak ve teknolojiyi daha erişilebilir hale getirmektir.
                                 </p>
                             </div>

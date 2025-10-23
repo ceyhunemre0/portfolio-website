@@ -30,7 +30,7 @@ const pricingData: Category[] = [
         period: 'Proje Başına',
         description: 'Küçük işletmeler ve kişisel projeler için ideal',
         features: [
-          '5 Sayfalık Modern Web Sitesi',
+          '1-5 Sayfalık Modern Web Sitesi',
           'Responsive (Mobil Uyumlu) Tasarım',
           'İletişim Formu Entegrasyonu',
           'SEO Optimizasyonu (Temel)',
@@ -45,12 +45,11 @@ const pricingData: Category[] = [
         period: 'Proje Başına',
         description: 'Büyüyen işletmeler için güçlü çözümler',
         features: [
-          '10+ Sayfalık Dinamik Web Sitesi',
+          '5-10 Sayfalık Dinamik Web Sitesi',
           'Modern UI/UX Tasarım',
           'CMS Entegrasyonu (İçerik Yönetimi)',
           'API Entegrasyonları',
           'İleri SEO & Analytics',
-          'E-Ticaret Modülü (Opsiyonel)',
           '3 Ay Teknik Destek & Güncelleme',
           'Performans Optimizasyonu'
         ],
@@ -69,7 +68,6 @@ const pricingData: Category[] = [
           'Gerçek Zamanlı Özellikler (WebSocket)',
           'Çoklu Dil Desteği',
           'Admin Panel & Dashboard',
-          'Yük Dengeleme & Ölçeklenebilirlik',
           '6 Ay Premium Destek',
           'DevOps & CI/CD Pipeline'
         ],
@@ -84,7 +82,7 @@ const pricingData: Category[] = [
     tiers: [
       {
         name: 'Basic',
-        price: '₺3,000',
+        price: '₺1,500',
         period: 'Proje Başına',
         description: 'Basit veri toplama ihtiyaçları için',
         features: [
@@ -92,7 +90,6 @@ const pricingData: Category[] = [
           '1000 Kayıt/Gün Limit',
           'CSV/JSON Export',
           'Temel Temizleme & Filtreleme',
-          'Haftalık Otomatik Çalışma',
           '1 Ay Güncelleme & Destek'
         ],
         cta: 'Hemen Başla'
@@ -108,7 +105,6 @@ const pricingData: Category[] = [
           'İleri Veri İşleme & Temizleme',
           'Proxy Rotasyonu & Anti-Bot Bypass',
           'Database Entegrasyonu',
-          'Günlük/Saatlik Otomasyonlar',
           'API Endpoint Sunumu',
           '3 Ay Destek & Optimizasyon'
         ],
@@ -129,7 +125,6 @@ const pricingData: Category[] = [
           'Bulut Altyapısı Entegrasyonu',
           'Monitoring & Alerting Dashboard',
           '6 Ay Premium Destek',
-          'SLA Garantisi'
         ],
         cta: 'İletişime Geç'
       }
