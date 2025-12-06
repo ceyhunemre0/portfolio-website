@@ -21,8 +21,8 @@ export default function Hero() {
       setTimeout(() => {
         setCurrentRole((prev) => (prev + 1) % roles.length);
         setIsTransitioning(false);
-      }, 1000);
-    }, 5000);
+      }, 600);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -77,7 +77,7 @@ export default function Hero() {
 
             {/* Animated Role Switcher */}
             <div className="h-16 mb-8 flex items-center justify-center lg:justify-start">
-              <p className={`text-2xl md:text-3xl font-bold text-white/90 transition-all duration-1000 ease-in-out ${
+              <p className={`text-2xl md:text-3xl font-bold text-white/90 transition-all duration-700 ease-in-out ${
                 isTransitioning ? 'opacity-0 translate-y-2 scale-95' : 'opacity-100 translate-y-0 scale-100'
               }`}>
                 {roles[currentRole]}
@@ -202,55 +202,6 @@ export default function Hero() {
           </svg>
         </a>
       </div>
-
-      <style jsx>{`
-        @keyframes blob {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          25% { transform: translate(20px, -50px) scale(1.1); }
-          50% { transform: translate(-20px, 20px) scale(0.9); }
-          75% { transform: translate(50px, 50px) scale(1.05); }
-        }
-        
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
-        }
-        
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-        
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
     </section>
   );
 }

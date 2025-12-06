@@ -15,11 +15,11 @@
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "devicon": "^2.16.0",
-    "next": "15.3.1",
+    "next": "16.0.7",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^7.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
