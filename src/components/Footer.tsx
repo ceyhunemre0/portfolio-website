@@ -56,12 +56,6 @@ export default function Footer() {
               Yeteneklerim
             </a>
             <a
-              href="#pricing"
-              className="text-retro-chrome/70 hover:text-neon-cyan font-mono text-sm transition duration-300 hover:scale-110"
-            >
-              Fiyatlandırma
-            </a>
-            <a
               href="#contact"
               className="text-retro-chrome/70 hover:text-neon-cyan font-mono text-sm transition duration-300 hover:scale-110"
             >
@@ -81,7 +75,7 @@ export default function Footer() {
           </p>
 
           {/* Social Links */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 relative z-20">
             <a
               href="https://www.instagram.com/only_emree/"
               className="w-12 h-12 rounded-lg bg-retro-panel backdrop-blur-sm flex items-center justify-center text-neon-pink border border-neon-pink/30 hover:bg-neon-pink/20 hover:border-neon-pink hover:shadow-neon-pink hover:scale-110 transition-all duration-300"

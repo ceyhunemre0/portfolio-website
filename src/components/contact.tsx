@@ -62,7 +62,7 @@ export default function Contact() {
             <form
               onSubmit={handleSubmit}
               method="POST"
-              className="holo-card rounded-xl p-8 transition-all duration-500"
+              className="holo-card rounded-xl p-8 transition-all duration-500 relative z-20"
             >
               {/* Terminal header */}
               <div className="flex items-center gap-2 mb-8 pb-4 border-b border-retro-chrome/10">
@@ -195,9 +195,12 @@ export default function Contact() {
                     <h4 className="text-lg font-semibold font-display text-retro-chrome">
                       E-posta
                     </h4>
-                    <p className="text-neon-cyan font-mono text-sm">
+                    <a
+                      href="mailto:ceyhunemretop0@gmail.com"
+                      className="text-neon-cyan font-mono text-sm hover:underline relative z-20"
+                    >
                       ceyhunemretop0@gmail.com
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -241,7 +244,7 @@ export default function Contact() {
                 <h4 className="text-lg font-semibold mb-4 font-display text-retro-chrome">
                   Sosyal Medya
                 </h4>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 relative z-20">
                   <a
                     href="https://www.instagram.com/only_emree/"
                     className="flex items-center justify-center w-14 h-14 rounded-lg bg-retro-panel text-neon-pink border border-neon-pink/40 hover:bg-neon-pink/20 hover:shadow-neon-pink hover:scale-110 transition-all duration-300"

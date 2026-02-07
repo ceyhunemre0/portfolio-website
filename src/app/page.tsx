@@ -3,21 +3,21 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Pricing from "@/components/Pricing";
+
 import Contact from "@/components/contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-  <>
-    <Header />
-    <Hero />
-    <About />
-    <Projects />
-    <Skills />
-    <Pricing />
-    <Contact />
-    <Footer />
-  </>
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+
+      <Contact />
+      <Footer />
+    </>
   );
-} 
+}

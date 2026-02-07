@@ -18,7 +18,6 @@ export default function Header() {
     { href: "#about", label: "Hakkımda" },
     { href: "#projects", label: "Projelerim" },
     { href: "#skills", label: "Yeteneklerim" },
-    { href: "#pricing", label: "Fiyatlandırma" },
     { href: "#contact", label: "İletişim" },
   ];
 
