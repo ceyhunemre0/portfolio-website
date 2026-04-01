@@ -26,7 +26,7 @@ const projects = [
     title: "Portfolio",
     description: "Kişisel marka, performans ve görsel anlatıyı bir araya getiren modern portfolyo deneyimi.",
     tags: ["Next.js", "Tailwind", "SEO", "Responsive"],
-    image: "/portfolio.png",
+    image: "/portfolio-v2.png",
     link: "#",
   },
 ];
