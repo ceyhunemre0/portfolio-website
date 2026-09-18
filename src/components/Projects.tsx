@@ -1,78 +1,72 @@
 import Image from "next/image";
 
-const projects = [
+const featured = [
   {
-    title: "SearchAgent",
-    description: "Doğal dil sorgularını canlı web verisiyle birleştiren, yanıt kalitesine odaklı akıllı arama ajanı.",
-    tags: ["Next.js", "TypeScript", "LangChain", "OpenAI"],
-    image: "/searchagent.png",
-    link: "https://github.com/ceyhunemre0/SearchAgent",
+    number: "01", type: "SaaS · 2026", title: "Qarson",
+    description: "Kafe ve restoranlar için QR menü, masadan sipariş, canlı masa takibi ve adisyon yönetimini tek akışta buluşturan bir SaaS ürünü.",
+    image: "/qarson.png", alt: "Qarson ürününün ana sayfası", href: "https://qarson.com.tr",
+    capabilities: ["Product design", "Full-stack", "Operations"],
   },
   {
-    title: "AI Integrated Planner",
-    description: "Focus mode, zaman takibi ve akıllı planlama akışlarını tek ürün deneyiminde birleştiren masaüstü uygulaması.",
-    tags: ["Tauri", "React", "TypeScript", "PostgreSQL"],
-    image: "/ai-planner.png",
-    link: "https://github.com/ceyhunemre0/AI-integrated-planner",
+    number: "02", type: "SaaS · 2026", title: "Danışan Takvimi",
+    description: "Psikolog, diyetisyen ve terapistler için müsaitlik, randevu ve danışan iletişimini sadeleştiren online çalışma alanı.",
+    image: "/danisan-takvimi.png", alt: "Danışan Takvimi ürününün ana sayfası", href: "https://danisantakvimi.com.tr",
+    capabilities: ["Product design", "Scheduling", "SaaS architecture"],
+  },
+];
+
+const selected = [
+  {
+    number: "03", title: "AI Integrated Planner",
+    description: "Odak modu, zaman takibi ve akıllı planlama akışlarını bir masaüstü ürününde birleştiren cross-platform uygulama.",
+    image: "/ai-planner.png", href: "https://github.com/ceyhunemre0/AI-integrated-planner",
+    meta: "Tauri · TypeScript · PostgreSQL",
   },
   {
-    title: "Statify+",
-    description: "Spotify verisini okunabilir içgörülere dönüştüren, veri görselleştirme odaklı analiz ürünü.",
-    tags: ["Python", "Flask", "Spotify API", "Charts"],
-    image: "/statifyplus-v2.png",
-    link: "https://github.com/ceyhunemre0/StatifyPlus",
-  },
-  {
-    title: "Portfolio",
-    description: "Kişisel marka, performans ve görsel anlatıyı bir araya getiren modern portfolyo deneyimi.",
-    tags: ["Next.js", "Tailwind", "SEO", "Responsive"],
-    image: "/portfolio-v2.png",
-    link: "#",
+    number: "04", title: "SearchAgent",
+    description: "Doğal dil sorgularını canlı web verisiyle buluşturan, kaynak odaklı bir araştırma ve yanıt ajanı.",
+    image: "/searchagent.png", href: "https://github.com/ceyhunemre0/SearchAgent",
+    meta: "Next.js · LangChain · OpenAI",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 py-24 md:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-16 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <span className="font-tech mb-2 block text-xs uppercase tracking-widest text-[#E00460]">Seçkin Çalışmalar</span>
-            <h2 className="font-headline text-5xl font-bold tracking-tight text-white">Projeler</h2>
-          </div>
-          <a className="font-tech hidden text-sm text-[#00F0FF] transition-colors hover:text-white md:flex" href="#contact">
-            İLETİŞİME GEÇ <span className="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
+    <section className="work-section section-spacing" id="work">
+      <div className="page-shell">
+        <div className="section-heading">
+          <p className="eyebrow">Seçili işler</p>
+          <h2>Üzerinde düşündüğüm,<br />tasarladığım ve geliştirdiğim ürünler.</h2>
         </div>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project) => (
-            <article key={project.title} className="glass-card group overflow-hidden rounded-2xl border border-white/10 transition-all duration-500 hover:border-[#00F0FF]/30">
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              </div>
-              <div className="p-8">
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="rounded border-l-2 border-[#00F0FF] bg-[color:var(--surface-container-high)] px-3 py-1 font-tech text-xs text-[#00F0FF]">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="font-headline text-2xl font-bold text-white">{project.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[color:var(--foreground-muted)]">{project.description}</p>
-                <a
-                  href={project.link}
-                  target={project.link.startsWith("http") ? "_blank" : undefined}
-                  rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="font-headline mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:text-[#00F0FF]"
-                >
-                  İncele <span className="material-symbols-outlined text-sm">east</span>
-                </a>
+        <div className="featured-work">
+          {featured.map((project) => (
+            <article className="project-feature" key={project.title}>
+              <a className="project-visual" href={project.href} target="_blank" rel="noreferrer" aria-label={`${project.title} sitesini aç`}>
+                <Image src={project.image} alt={project.alt} fill sizes="(max-width: 900px) 100vw, 75vw" />
+              </a>
+              <div className="project-copy">
+                <div className="project-index"><span>{project.number}</span><span>{project.type}</span></div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <ul aria-label="Proje kapsamı">{project.capabilities.map((item) => <li key={item}>{item}</li>)}</ul>
+                <a className="text-link" href={project.href} target="_blank" rel="noreferrer">Canlı ürünü gör <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           ))}
         </div>
+        <div className="selected-work">
+          {selected.map((project) => (
+            <article className="project-small" key={project.title}>
+              <a className="project-small__visual" href={project.href} target="_blank" rel="noreferrer">
+                <Image src={project.image} alt={`${project.title} arayüzü`} fill sizes="(max-width: 700px) 100vw, 50vw" />
+              </a>
+              <div className="project-small__heading"><span>{project.number}</span><h3>{project.title}</h3></div>
+              <p>{project.description}</p>
+              <div className="project-small__footer"><span>{project.meta}</span><a href={project.href} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub sayfasını aç`}>↗</a></div>
+            </article>
+          ))}
+        </div>
+        <a className="archive-link" href="https://github.com/ceyhunemre0" target="_blank" rel="noreferrer">Tüm GitHub arşivini gör <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   );

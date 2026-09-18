@@ -1,79 +1,48 @@
-// app/layout.tsx
-import { Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next";
+import { Geist_Mono, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
-export const metadata = {
-  title: "Ceyhun Emre Top | AI & Full-Stack Developer",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ceyhunemre.net.tr"),
+  title: "Ceyhun Emre Top — Computer Engineer",
   description:
-    "AI ve full-stack odaklı yazılım projeleri, portfolyo ve modern ürün geliştirme çalışmaları.",
-  keywords: [
-    "ceyhun emre top",
-    "yazılım geliştirici",
-    "next.js",
-    "typescript",
-    "kişisel web sitesi",
-    "ai full-stack developer",
-    "AI engineer",
-    "full-stack developer",
-  ],
+    "Yazılım ürünleri, AI sistemleri ve otomasyonlar geliştiren Computer Engineer Ceyhun Emre Top'un seçili çalışmaları.",
+  keywords: ["Ceyhun Emre Top", "Computer Engineer", "Full Stack Developer", "AI Automation", "SaaS", "Next.js"],
   openGraph: {
-    title: "Ceyhun Emre Top",
-    description: "AI ve full-stack odaklı projeler, ürünler ve yazılım çalışmaları.",
-    url: "https://www.ceyhunemre.net.tr",
+    title: "Ceyhun Emre Top — Computer Engineer",
+    description: "Yazılım ürünleri, AI sistemleri ve otomasyonlar.",
+    url: "/",
     siteName: "Ceyhun Emre Top",
-    images: [
-      {
-        url: "https://www.ceyhunemre.net.tr/images/hero_icon.png",
-        width: 1200,
-        height: 630,
-        alt: "Ceyhun Emre Top",
-      },
-    ],
+    images: [{ url: "/qarson.png", width: 1440, height: 1000 }],
     locale: "tr_TR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ceyhun Emre Top",
-    description: "AI ve full-stack odaklı içerikler ve portfolyo.",
-    images: ["https://www.ceyhunemre.net.tr/images/hero_icon.png"],
+    title: "Ceyhun Emre Top — Computer Engineer",
+    description: "Yazılım ürünleri, AI sistemleri ve otomasyonlar.",
+    images: ["/qarson.png"],
   },
-  robots: "index, follow",
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="tr"
-      className={`${geistMono.variable} ${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
-    >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        />
-      </head>
-      <body className="bg-background text-foreground font-body transition-colors duration-300">
+    <html lang="tr" className={`${inter.variable} ${geistMono.variable}`}>
+      <body>
         <Analytics />
         {children}
       </body>
