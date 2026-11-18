@@ -93,7 +93,7 @@ export default function ScrollStory() {
       </div>
       <button className="halo-toggle" type="button" onClick={() => setHaloPaused(!haloPaused)} aria-label={haloPaused ? "Halka hareketini başlat" : "Halka hareketini durdur"}>{haloPaused ? "▶" : "Ⅱ"}</button>
 
-      {scenes.map((scene, i) => <section className={`portfolio-copy ${i === 2 || i === 4 ? "portfolio-copy--right" : ""} ${i === 6 ? "portfolio-copy--final" : ""}`} key={scene.name} style={{ opacity: visibility(i), transform: reduced ? undefined : `translate3d(0, ${(i - position) * 24}px, 0)`, pointerEvents: active === i ? "auto" : "none" }} aria-hidden={active !== i}>
+      {scenes.map((scene, i) => <section className={`portfolio-copy ${i === 0 ? "portfolio-copy--intro" : ""} ${i === 2 || i === 4 ? "portfolio-copy--right" : ""} ${i === 6 ? "portfolio-copy--final" : ""}`} key={scene.name} style={{ opacity: visibility(i), transform: reduced ? undefined : `translate3d(0, ${(i - position) * 24}px, 0)`, pointerEvents: active === i ? "auto" : "none" }} aria-hidden={active !== i}>
         <p className="portfolio-copy__name">{scene.name}</p><h1>{scene.title}</h1>{scene.line && <p>{scene.line}</p>}{scene.detail && <small>{scene.detail}</small>}
         {scene.url && <a href={scene.url} tabIndex={active === i ? 0 : -1} target="_blank" rel="noreferrer">{scene.action}</a>}
         {i === scenes.length - 1 && <div className="portfolio-links" aria-label="İletişim bağlantıları">
